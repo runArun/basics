@@ -9,6 +9,10 @@ export class Home extends React.Component {
             age: props.initialAge,
             status: 0
         };
+
+        setTimeout(()=>{
+            this.state.status+=1;
+        },1000);
     }
 
     onMakeOlder(){
