@@ -12,7 +12,9 @@ export class Home extends React.Component {
         };
 
         setTimeout(()=>{
-            this.state.status+=1;
+            this.setState({
+                status: 1
+            })
         },1000);
         console.log('Constructor')
     }
@@ -37,7 +39,7 @@ export class Home extends React.Component {
         return true;
     }
 
-    componentWillUpdate(){
+    componentWillUpdate(nextProps,nextState){
         console.log('component will update',nextProps,nextState);
 
     }
